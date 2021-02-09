@@ -169,28 +169,22 @@ namespace Elephantile
             }
             else
             {
-                mNotePlayer.PlayFailureSound();
+                // mNotePlayer.PlayFailureSound();
                 mFeedbackGroup.PlaySadFace();
                 --mLivesLeft;
                 mHealthMeter?.SetHealth(mLivesLeft);
                 mStreakLevel = 0;
                 if (mLivesLeft <= 0)
                 {
-                    // IEnumerator DoRestartLevel()
-                    // {
-                    //     yield return new WaitForSeconds(1.0f);
-                    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                    // }
                     text.SetActive(true);
                     mLevelState = LevelState.Failed;
-                    // StartCoroutine(DoRestartLevel());
                     return;
                 }
             }
 
             var streakNormalized = mStreakLevel / 2.0f;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("streak", streakNormalized);
-            mSoundTrack.PlayCorrectNote();
+            mSoundTrack.PlayCorrectNoteMultiInstrument();
 
             AdvanceNote();
 

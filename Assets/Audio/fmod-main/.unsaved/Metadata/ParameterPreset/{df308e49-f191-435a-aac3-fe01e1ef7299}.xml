@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{df308e49-f191-435a-aac3-fe01e1ef7299}">
+		<property name="name">
+			<value>Magnet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{99c0704b-3304-4ee1-84d0-71991ce055b2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{08ebc590-04b9-44a0-93e3-7701382c2dc9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{08ebc590-04b9-44a0-93e3-7701382c2dc9}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>7</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -26,6 +26,7 @@ public class NotePlayer : MonoBehaviour
 
     public void PlayNote(char n)
     {
+        return;
         if (!mNoteMapper.ContainsKey(n))
         {
             Debug.LogError($"The note '{n}' is not mapped");

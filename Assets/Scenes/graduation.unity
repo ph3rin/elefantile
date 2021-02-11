@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Notes/Piano/piano_experiment
+  Event: event:/Songs/graduation/graduation-normal-magnet
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
@@ -256,5 +256,6 @@ PrefabInstance:
       propertyPath: mMaxLives
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 323819346061148932, guid: 00a01eddd7b925a4f8999c9b996b6760, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a01eddd7b925a4f8999c9b996b6760, type: 3}

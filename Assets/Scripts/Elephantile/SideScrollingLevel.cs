@@ -184,7 +184,7 @@ namespace Elephantile
 
             var streakNormalized = mStreakLevel / 2.0f;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("streak", streakNormalized);
-            mSoundTrack.PlayCorrectNoteMultiInstrument();
+            mSoundTrack.PlayCorrectNote();
 
             AdvanceNote();
 

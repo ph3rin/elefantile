@@ -169,7 +169,7 @@ namespace Elephantile
             }
             else
             {
-                // mNotePlayer.PlayFailureSound();
+                mNotePlayer.PlayFailureSound();
                 mFeedbackGroup.PlaySadFace();
                 --mLivesLeft;
                 mHealthMeter?.SetHealth(mLivesLeft);

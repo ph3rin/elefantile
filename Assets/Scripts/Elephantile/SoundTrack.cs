@@ -11,8 +11,9 @@ namespace Elephantile
         private int mMagnetIndex = 0;
         private bool mStartedPlaying = false;
         private Queue<StudioEventEmitter> mEmitterQueue = new Queue<StudioEventEmitter>();
+        private StudioEventEmitter mPreviousEmitter = null;
 
-        public void PlayCorrectNote()
+        public void PlayCorrectNote(bool keepLastAlive = false)
         {
             if (mEmitterQueue.Count > 3)
             {
@@ -21,27 +22,24 @@ namespace Elephantile
                 Destroy(oldest.gameObject);
             }
 
+            if (mPreviousEmitter != null && !keepLastAlive)
+            {
+                mPreviousEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                mPreviousEmitter = null;
+            }
+            
             var emitter = Instantiate(mEmitterPrefab);
-            ++mMagnetIndex;
             emitter.Play();
             emitter.SetParameter("magnet", mMagnetIndex);
             emitter.EventInstance.triggerCue();
-            
+            mPreviousEmitter = emitter;
             mEmitterQueue.Enqueue(emitter);
+            ++mMagnetIndex;
         }
 
         public void ResetTrack()
         {
-            // if (mEmitterPrefab == null)
-            // {
-            //     mStartedPlaying = false;
-            // }
-            // else
-            // {
-            //     Destroy(mEmitter.gameObject);
-            //     mEmitter.EventInstance.start();
-            //     mEmitter = Instantiate(mEmitterPrefab);
-            // }
+            mMagnetIndex = 0;
         }
 
         public void Stop()

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{4c3d01f5-8b68-480e-9382-28f026373ce9}">
 		<property name="name">
-			<value>graduation-normal 2</value>
+			<value>graduation-normal-magnet</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -37,6 +37,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{206e9d40-97e1-4580-9e95-fce5d5d25ff7}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{2364d2f1-b667-4cc8-ab1e-ba57357ba97f}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{99c8141a-8cc8-4093-83dc-2e7c58b3fc7d}">
@@ -168,6 +171,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f8c519bf-a20a-4dbc-b356-9b5d7eb51123}">
+		<property name="volume">
+			<value>-7.5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{fb448f71-979d-4639-95a1-5e9a2187083a}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{c4d409a0-569e-405a-8816-e43036175582}</destination>
 		</relationship>
@@ -821,6 +830,32 @@
 		<relationship name="markerTrack">
 			<destination>{0a9ba91b-69a3-442f-8b40-8ca9bdd61bc5}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{fb448f71-979d-4639-95a1-5e9a2187083a}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="holdTime">
+			<value>60000</value>
+		</property>
+		<property name="decayTime">
+			<value>0</value>
+		</property>
+		<property name="releaseTime">
+			<value>2000</value>
+		</property>
+		<property name="releaseShape">
+			<value>-0.0316918902</value>
+		</property>
+		<property name="finalValue">
+			<value>-50</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{c4d409a0-569e-405a-8816-e43036175582}">
 		<relationship name="effects">

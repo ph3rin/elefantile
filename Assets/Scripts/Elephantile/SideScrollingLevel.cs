@@ -214,7 +214,7 @@ namespace Elephantile
 
             mAcceptingInput = false;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("streak", 1.0f);
-            mSoundTrack.PlayCorrectNote();
+            mSoundTrack.PlayCorrectNote(true);
             StartCoroutine(DoTransitionToPayoff());
         }
 

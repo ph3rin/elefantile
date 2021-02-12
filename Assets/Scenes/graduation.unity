@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: mMaxLives
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 323819347044244719, guid: 00a01eddd7b925a4f8999c9b996b6760, type: 3}
+      propertyPath: mIntervalBetweenNotes
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 323819346061148932, guid: 00a01eddd7b925a4f8999c9b996b6760, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a01eddd7b925a4f8999c9b996b6760, type: 3}

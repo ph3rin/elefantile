@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{3e653fd2-8e09-4b44-b4fc-ffe30d7e88a4}">
+		<property name="name">
+			<value>WrongNotes</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ca563f0d-e4ff-4ade-9da5-5a8151278865}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{44d7363c-f70b-4079-8b4b-4d2d9334e4db}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{ebdf87c5-3237-4b05-a393-042351d01e2e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ca563f0d-e4ff-4ade-9da5-5a8151278865}">
+		<relationship name="effects">
+			<destination>{bec78a27-d2e4-488c-a695-438186dc9542}</destination>
+			<destination>{9efd5394-32e5-450c-9f87-0efa8c4946c5}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{44d7363c-f70b-4079-8b4b-4d2d9334e4db}" />
+	<object class="MixerBusFader" id="{bec78a27-d2e4-488c-a695-438186dc9542}" />
+	<object class="Sidechain" id="{9efd5394-32e5-450c-9f87-0efa8c4946c5}" />
+</objects>
